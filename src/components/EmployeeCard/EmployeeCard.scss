@@ -1,0 +1,38 @@
+.employee__card {
+  &__text {
+    text-align: center;
+    font-size: 15px;
+    height: 20%;
+  }
+  margin: 5px;
+  border: 3px solid blue;
+  width: 90px;
+  height: 160px;
+  border-radius: 10px;
+  flex: 0 1 100px; /* Add this line */
+}
+.employees__container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+.employee__counter {
+  height: 40%;
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+}
+.employee__buttonUp {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: none;
+}
+.employee__buttonDown {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: none;
+}
