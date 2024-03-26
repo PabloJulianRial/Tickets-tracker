@@ -24,12 +24,12 @@ const Employee = ({ name, role }: EmployeeProps) => {
       <p className="employee__card__text">{name}</p>
       <p className="employee__card__text">{role}</p>
       <div className="employee__counter">
-        <button className="employee__buttonUp" onClick={handleIncrement}>
-          +
-        </button>
-        <p>{counter}</p>
-        <button className="employee__buttonDown" onClick={handleDecrement}>
+        <button className="employee__buttonUp" onClick={handleDecrement}>
           -
+        </button>
+        <p className="employee__tickets">{counter}</p>
+        <button className="employee__buttonDown" onClick={handleIncrement}>
+          +
         </button>
       </div>
     </div>

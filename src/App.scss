@@ -3,22 +3,40 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html,
 body {
-  background-color: rgb(215, 208, 208);
+  height: 100%;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #808080;
+  background: linear-gradient(to bottom, #808080, #7c7cc4);
+}
 .flex {
   display: flex;
-  margin-left: 0.5rem;
-  flex-wrap: wrap;
+  flex-direction: column;
   width: 95vw;
-  height: 95vh;
-
-  border-radius: 10px;
+  height: 100%;
+  margin: 0 auto;
 }
+
 .heading {
   text-align: center;
+  height: 60px;
   width: 200px;
   margin: 1rem auto;
-  margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .heading {
+    height: 70px;
+  }
+  .flex {
+    width: 65vw;
+    height: 100%;
+  }
 }
