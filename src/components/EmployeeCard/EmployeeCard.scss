@@ -4,8 +4,10 @@
     font-size: 15px;
     height: 20%;
   }
+  padding-top: 1rem;
+  background-color: rgb(189, 184, 184);
   margin: 5px;
-  border: 3px solid blue;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
   width: 90px;
   height: 160px;
   border-radius: 10px;
@@ -27,12 +29,12 @@
 .employee__buttonUp {
   width: 20px;
   height: 20px;
-  background-color: white;
+  background-color: rgb(189, 184, 184);
   border: none;
 }
 .employee__buttonDown {
   width: 20px;
   height: 20px;
-  background-color: white;
+  background-color: rgb(189, 184, 184);
   border: none;
 }

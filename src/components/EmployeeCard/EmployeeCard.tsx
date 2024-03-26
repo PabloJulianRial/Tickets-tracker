@@ -1,15 +1,13 @@
-import team from "../../data";
 import "../EmployeeCard/EmployeeCard.scss";
 import { useState } from "react";
 
 type EmployeeProps = {
   name: string;
   role: string;
-  tickets: number;
 };
 
-const Employee = ({ name, role, tickets }: EmployeeProps) => {
-  const [counter, setCounter] = useState<number>(tickets);
+const Employee = ({ name, role }: EmployeeProps) => {
+  const [counter, setCounter] = useState<number>(0);
 
   const handleIncrement = () => {
     setCounter(counter + 1);
