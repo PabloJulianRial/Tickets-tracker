@@ -7,24 +7,30 @@ type DropDownProps = {
   handleSelect: ChangeEventHandler<HTMLSelectElement>;
 };
 
-let teamToFilter = [...team];
-const lastItem = teamToFilter[teamToFilter.length - 1];
+const roles = team.map((employee) => {
+  return employee.role;
+});
+
+const uniqueRoles: string[] = [];
+roles.forEach((role) => {
+  if (!uniqueRoles.includes(role)) {
+    uniqueRoles.push(role);
+  }
+});
 
 const DropDown = ({ selectTerm, handleSelect }: DropDownProps) => {
-  // for (let i: number = 0; i < teamToFilter.length - 1; i++) {
-  //   if (teamToFilter[i].role === teamToFilter[i + 1].role) {
-  //     teamToFilter.shift();
-  //   }
-  // }
-
   return (
     <div className="search-box">
-      <label className="drop-down__label">Search by role</label>
-      <select value={selectTerm} onChange={handleSelect}>
-        {teamToFilter.map((employee, index) => (
-          <option key={index}>{employee.role}</option>
+      <label className="search-box__label">Search by role</label>
+      <select
+        className="search-box__select"
+        value={selectTerm}
+        onChange={handleSelect}
+      >
+        {uniqueRoles.map((role, index) => (
+          <option key={index}>{role}</option>
         ))}
-        <option key={lastItem.id}>{lastItem.role}</option>
+
         <option key="all">all</option>
       </select>
     </div>

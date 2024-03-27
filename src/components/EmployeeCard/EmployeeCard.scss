@@ -8,17 +8,23 @@
   border-radius: 10px;
   flex: 0 1 100px;
   &__text {
+    margin-bottom: 8px;
     text-align: center;
     font-size: 13px;
     font-weight: 600;
     height: 20%;
+    &-name {
+      font-size: 15px;
+    }
+    &-role {
+      color: rgb(107, 100, 100);
+    }
   }
 }
 
 .employee__counter {
   height: 40%;
   display: flex;
-
   justify-content: space-around;
   align-items: center;
 }
@@ -39,6 +45,16 @@
 .employee__tickets {
   font-size: 25px;
   padding-top: 10px;
+}
+
+.green {
+  background-color: #77daac;
+}
+.yellow {
+  background-color: #d3c835;
+}
+.red {
+  background-color: #d87171;
 }
 @media screen and (min-width: 768px) {
   .employee__card {

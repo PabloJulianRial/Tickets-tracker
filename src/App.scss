@@ -4,17 +4,11 @@
   box-sizing: border-box;
 }
 
-html,
-body {
-  height: 100%;
-}
-
 body {
   font-family: "Raleway", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
   background: linear-gradient(to left, #9368a4, #7c7cc4);
 }
 .flex {
@@ -35,7 +29,10 @@ body {
 
 @media screen and (min-width: 768px) {
   .heading {
-    height: 70px;
+    margin-bottom: 2rem;
+    height: 40px;
+    width: 100%;
+    font-size: 50px;
   }
   .flex {
     width: 65vw;
