@@ -11,22 +11,21 @@ let teamToFilter = [...team];
 const lastItem = teamToFilter[teamToFilter.length - 1];
 
 const DropDown = ({ selectTerm, handleSelect }: DropDownProps) => {
-  //   for (let i: number = 0; i < teamToFilter.length - 1; i++) {
-  //     if (teamToFilter[i].role === teamToFilter[i + 1].role) {
-  //       teamToFilter.shift();
-  //     }
+  // for (let i: number = 0; i < teamToFilter.length - 1; i++) {
+  //   if (teamToFilter[i].role === teamToFilter[i + 1].role) {
+  //     teamToFilter.shift();
   //   }
+  // }
 
   return (
     <div className="search-box">
-      <label htmlFor="drop-down" className="drop-down__label">
-        Search by role
-      </label>
-      <select id="cars" name="cars" value={selectTerm} onChange={handleSelect}>
+      <label className="drop-down__label">Search by role</label>
+      <select value={selectTerm} onChange={handleSelect}>
         {teamToFilter.map((employee, index) => (
           <option key={index}>{employee.role}</option>
         ))}
         <option key={lastItem.id}>{lastItem.role}</option>
+        <option key="all">all</option>
       </select>
     </div>
   );

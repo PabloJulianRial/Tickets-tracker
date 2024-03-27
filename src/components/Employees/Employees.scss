@@ -3,13 +3,9 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  padding-left: 0.75rem;
 }
-.input__form {
-  background-color: rgb(246, 242, 242);
-  height: 20px;
-  width: 200px;
-  margin-left: 1rem;
-}
+
 .search-boxes {
   width: 50%;
   margin: 0 auto;

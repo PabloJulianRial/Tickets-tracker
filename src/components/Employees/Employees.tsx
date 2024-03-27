@@ -4,6 +4,7 @@ import Employee from "../EmployeeCard/EmployeeCard";
 import { useState, FormEvent, ChangeEvent } from "react";
 import SearchBox from "../../components/SearchBox/SearchBox";
 import DropDown from "../DropDown/DropDown";
+
 const Employees = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [selectTerm, setSelectTerm] = useState<string>("");
@@ -15,7 +16,11 @@ const Employees = () => {
 
   const handleSelect = (event: ChangeEvent<HTMLSelectElement>) => {
     const option = event.currentTarget.value.toLowerCase();
-    setSelectTerm(option);
+    if (option === "all") {
+      setSelectTerm("");
+    } else {
+      setSelectTerm(option);
+    }
   };
 
   const filteredEmployees = team.filter((employee) => {
